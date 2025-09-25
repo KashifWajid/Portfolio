@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaGamepad, FaServer, FaTachometerAlt, FaCloud, FaTools, FaProjectDiagram } from 'react-icons/fa';
+import { ReactTyped } from "react-typed";
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("All");
@@ -157,7 +158,7 @@ export default function Portfolio() {
   return (
     <div className="bg-gray-50 text-gray-900 min-h-screen font-sans">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+      <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6">
         <motion.img
           src="/profile.png"
           alt="Profile"
@@ -168,21 +169,30 @@ export default function Portfolio() {
           whileHover={{ scale: 1.1 }}
         />
         <motion.h1
-          className="text-5xl font-bold mb-4"
+          className="text-5xl font-bold mb-6 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           Hi, I'm Kashif Wajid
         </motion.h1>
-        <motion.p
-          className="text-xl mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <motion.div
+          className="text-lg md:text-xl leading-relaxed text-center max-w-3xl mb-8 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Full-Stack Game Dev | Aspiring Cook
-        </motion.p>
+          <ReactTyped
+            strings={[
+              `Principal Software Engineer with 10+ years of experience building real-time multiplayer mobile games and high-performance distributed backend systems.`
+            ]}
+            typeSpeed={15}
+            backSpeed={0}
+            showCursor={true}
+            cursorChar="|"
+            loop={false}
+          />
+        </motion.div>
         <motion.a
           href="#projects"
           className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200"
@@ -192,35 +202,65 @@ export default function Portfolio() {
         </motion.a>
       </section>
 
-{/* Core Skills Section */}
-<section className="py-20 px-6 text-center">
-  <h2 className="text-3xl font-bold mb-6">Core Skills</h2>
-  <div className="max-w-4xl mx-auto space-y-6 text-left">
-    {coreSkills.map((skill, index) => (
-      <motion.div
-        key={index}
-        className="bg-white p-6 rounded-xl shadow-md flex items-start gap-4"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-      >
-        <motion.div
-          initial={{ scale: 0, rotate: -45, opacity: 0 }}
-          whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.2 }}
-          className="flex-shrink-0"
-        >
-          {skill.icon}
-        </motion.div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
-          <p className="text-gray-700">{skill.skills}</p>
+      {/* Core Skills Section */}
+      <section className="py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-6">Core Skills</h2>
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          {coreSkills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-md flex items-start gap-4"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <motion.div
+                initial={{ scale: 0, rotate: -45, opacity: 0 }}
+                whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                whileHover={{ scale: 1.2, rotate: 10 }}
+                transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.2 }}
+                className="flex-shrink-0"
+              >
+                {skill.icon}
+              </motion.div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
+                <p className="text-gray-700">{skill.skills}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    ))}
-  </div>
-</section>
+      </section>
+      {/* Summary Section */}
+      <section className="flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-16">
+        <motion.h2
+          className="text-3xl font-bold mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Summary of Work
+        </motion.h2>
+
+        <motion.div
+          className="backdrop-blur-lg bg-white/10 rounded-2xl p-6 max-w-3xl text-center shadow-2xl"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <p className="text-base md:text-lg leading-relaxed text-white/90">
+            Principal Software Engineer with 10+ years of experience building real-time multiplayer mobile games
+            and high-performance distributed backend systems. Delivered 5+ global game launches, including MMORPGs,
+            4X strategy titles, and card-based strategy games supporting 25K+ concurrent players with 99.9% uptime
+            and 40% latency reduction. Expert in Unity3D (C#) for mobile game development and Akka.NET, .NET Core,
+            DDD, and microservices for scalable backend architectures. Skilled in performance optimisation, load testing
+            (JMeter, Locust), and cloud-native deployments (AWS, Terraform, Docker), with a proven track record of improving
+            server reliability by 50%.
+          </p>
+        </motion.div>
+      </section>
+
+
       {/* Experience Section */}
       <section className="py-20 px-6 bg-gray-100">
         <h2 className="text-3xl font-bold text-center mb-10">Experience</h2>
