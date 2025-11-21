@@ -35,10 +35,9 @@ export default function Hero() {
             >
                 <ReactTyped
                     strings={[
-                        "Principal Software Engineer",
+                        "10+ Years of Experience",
                         "Building Real-time Multiplayer Games",
-                        "Architecting Distributed Systems",
-                        "10+ Years of Experience"
+                        "Architecting Distributed Systems"
                     ]}
                     typeSpeed={40}
                     backSpeed={30}
