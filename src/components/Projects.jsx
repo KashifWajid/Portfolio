@@ -11,49 +11,49 @@ export default function Projects() {
             category: "MMORPG",
             description: "Casual MMORPG supporting 20K+ concurrent players with Akka.NET backend, optimized latency & performance.",
             link: "https://revolvinggames.com/games/skyborne",
-            image: "https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=Skyborne" // Placeholder, would ideally use real images
+            image: "/projects/skyborne.png"
         },
         {
             name: "Chaos Battle League",
             category: "Strategy",
             description: "Implemented guilds, chat, store systems in Unity3D driving engagement & retention.",
             link: "https://www.youtube.com/watch?v=-t4knmgWXws",
-            image: "https://via.placeholder.com/400x250/7C3AED/FFFFFF?text=Chaos+Battle"
+            image: "/projects/choas battle league.png"
         },
         {
             name: "Oz Broken Kingdom",
             category: "RPG",
             description: "Core gameplay systems & real-time chat built for seamless player interactions.",
             link: "https://www.youtube.com/watch?v=g9OJk5ghwS8",
-            image: "https://via.placeholder.com/400x250/EC4899/FFFFFF?text=Oz+Broken+Kingdom"
+            image: "/projects/OZ broken kingdom.png"
         },
         {
             name: "Heroes of Blood",
             category: "RPG",
             description: "Strategy card-based RPG with PvE & PvP modes for 50K+ players in Cocos2d-x/C++.",
             link: "https://www.youtube.com/watch?v=x5yAjvl83Jg",
-            image: "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Heroes+of+Blood"
+            image: "/projects/heroes of blood.png"
         },
         {
             name: "Blades of Battle RPG",
             category: "RPG",
             description: "Featured under Best New Games in 137 countries, boosting engagement by 30%.",
             link: "https://www.amazon.com/Caramel-Tech-Studios-Blades-Battle/dp/B01D9SZKUO",
-            image: "https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Blades+of+Battle"
+            image: "/projects/blades of battle.png"
         },
         {
             name: "Brain Teasers & Buddies",
             category: "Puzzle",
             description: "Turn-based cognitive multiplayer game built in Cocos2d-x/C++.",
             link: "https://apkpure.net/brain-teasers-buddies/com.carameltec.btnbAndroid",
-            image: "https://via.placeholder.com/400x250/10B981/FFFFFF?text=Brain+Teasers"
+            image: "/projects/brain teaser and buddies.png"
         },
         {
             name: "Astro Boy Flight",
             category: "Arcade",
             description: "Dynamic difficulty & enemy wave spawning for challenging gameplay in Unity3D.",
             link: "https://www.amazon.com/Animoca-Brands-Astro-Boy-Flight/dp/B00UMQ1NLW",
-            image: "https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Astro+Boy"
+            image: "/projects/astro boy flight.png"
         }
     ];
 
@@ -104,11 +104,16 @@ export default function Projects() {
                                 transition={{ duration: 0.3 }}
                                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                             >
-                                <div className="h-48 bg-gray-200 relative overflow-hidden">
-                                    {/* Placeholder gradient if image fails or for style */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-blue-500 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl p-4 text-center">
-                                        {project.name}
+                                <div className="h-48 relative overflow-hidden group">
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                        <div className="p-4 text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                            {project.name}
+                                        </div>
                                     </div>
                                 </div>
 
