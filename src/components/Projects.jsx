@@ -71,7 +71,7 @@ export default function Projects() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-4xl font-bold mb-4 text-gray-900">Projects</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-8"></div>
+                    <div className="w-20 h-1 bg-sky-600 mx-auto rounded-full mb-8"></div>
 
                     <div className="flex justify-center gap-3 flex-wrap">
                         {categories.map(cat => (
@@ -79,8 +79,8 @@ export default function Projects() {
                                 key={cat}
                                 onClick={() => setFilter(cat)}
                                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat
-                                        ? 'bg-indigo-600 text-white shadow-lg scale-105'
-                                        : 'bg-white text-gray-600 hover:bg-gray-100'
+                                    ? 'bg-sky-600 text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-600 hover:bg-gray-100'
                                     }`}
                             >
                                 {cat}
@@ -106,7 +106,7 @@ export default function Projects() {
                             >
                                 <div className="h-48 bg-gray-200 relative overflow-hidden">
                                     {/* Placeholder gradient if image fails or for style */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-blue-500 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
                                     <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl p-4 text-center">
                                         {project.name}
                                     </div>
@@ -114,11 +114,11 @@ export default function Projects() {
 
                                 <div className="p-6">
                                     <div className="flex justify-between items-center mb-3">
-                                        <span className="text-xs font-bold px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full uppercase tracking-wide">
+                                        <span className="text-xs font-bold px-3 py-1 bg-sky-100 text-sky-600 rounded-full uppercase tracking-wide">
                                             {project.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-sky-600 transition-colors">
                                         {project.name}
                                     </h3>
                                     <p className="text-gray-600 mb-6 line-clamp-3">
@@ -128,7 +128,7 @@ export default function Projects() {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline"
+                                        className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:underline"
                                     >
                                         View Project <FaExternalLinkAlt size={14} />
                                     </a>

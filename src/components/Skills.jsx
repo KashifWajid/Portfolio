@@ -5,7 +5,7 @@ export default function Skills() {
     const coreSkills = [
         {
             category: 'Mobile Game Development',
-            icon: <FaGamepad className="text-4xl mb-4 text-indigo-500" />,
+            icon: <FaProjectDiagram className="text-4xl mb-4 text-sky-500" />,
             skills: 'Unity3D (C#), Cocos2d-x (C++), iOS & Android, Gameplay Architecture, Asset Optimisation'
         },
         {
@@ -61,7 +61,7 @@ export default function Skills() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl font-bold mb-4 text-gray-900">Core Skills</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+                    <div className="w-20 h-1 bg-sky-600 mx-auto rounded-full"></div>
                 </motion.div>
 
                 <motion.div
@@ -78,7 +78,7 @@ export default function Skills() {
                             className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
                         >
                             <div className="flex flex-col items-center text-center">
-                                <div className="p-4 bg-indigo-50 rounded-full mb-6">
+                                <div className="p-4 bg-sky-50 rounded-full mb-6">
                                     {skill.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3 text-gray-900">{skill.category}</h3>

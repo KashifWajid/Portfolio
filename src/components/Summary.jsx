@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Summary() {
     return (
-        <section className="flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-16">
+        <section className="flex flex-col items-center justify-center bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-16">
             <motion.h2
                 className="text-3xl font-bold mb-6"
                 initial={{ opacity: 0, y: -20 }}

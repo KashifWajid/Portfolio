@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="w-full px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <a href="#" className="text-2xl font-bold text-indigo-600 font-sans">
+                        <a href="#" className="text-2xl font-bold text-sky-600 font-sans">
                             Kashif Wajid
                         </a>
                     </div>
@@ -30,7 +30,7 @@ export default function Navbar() {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                                    className="text-gray-700 hover:text-sky-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                                 >
                                     {link.name}
                                 </a>
@@ -42,7 +42,7 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-700 hover:text-indigo-600 focus:outline-none"
+                            className="text-gray-700 hover:text-sky-600 focus:outline-none"
                         >
                             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                         </button>
@@ -63,7 +63,7 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                                className="text-gray-700 hover:text-sky-600 block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 {link.name}
                             </a>

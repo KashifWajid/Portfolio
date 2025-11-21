@@ -83,10 +83,10 @@ export default function Experience() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl font-bold mb-4 text-gray-900">Experience</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+                    <div className="w-20 h-1 bg-sky-600 mx-auto rounded-full"></div>
                 </motion.div>
 
-                <div className="relative border-l-4 border-indigo-200 ml-4 md:ml-8 space-y-12">
+                <div className="relative border-l-4 border-sky-200 ml-4 md:ml-8 space-y-12">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
@@ -96,14 +96,14 @@ export default function Experience() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="relative pl-8 md:pl-12"
                         >
-                            <div className="absolute -left-[14px] top-0 bg-indigo-600 rounded-full p-2 text-white shadow-lg">
+                            <div className="absolute -left-[14px] top-0 bg-sky-600 rounded-full p-2 text-white shadow-lg">
                                 <FaBriefcase size={16} />
                             </div>
 
                             <div className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
                                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                                     <h3 className="text-2xl font-bold text-gray-900">{exp.role}</h3>
-                                    <span className="text-indigo-600 font-semibold bg-indigo-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">
+                                    <span className="text-sky-600 font-semibold bg-sky-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">
                                         {exp.period}
                                     </span>
                                 </div>
