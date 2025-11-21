@@ -6,6 +6,7 @@ export default function Experience() {
         {
             role: "Principal Software Engineer",
             company: "Revolving Games",
+            image: "/experience/revolving games.svg",
             period: "2022–Present",
             highlights: [
                 "Scaled MMORPG backend using Akka.NET for 20K+ concurrent players, reducing downtime by 30%",
@@ -18,6 +19,7 @@ export default function Experience() {
         {
             role: "Senior Software Engineer",
             company: "Revolving Games",
+            image: "/experience/revolving games.svg",
             period: "2019–2022",
             highlights: [
                 "Engineered backend services for a cross-platform 4X strategy game with 99.9% uptime",
@@ -28,6 +30,7 @@ export default function Experience() {
         {
             role: "Senior Software Engineer",
             company: "Fizz.io",
+            image: "/experience/fizz.avif",
             period: "2019",
             highlights: [
                 "Implemented guilds, chat, store systems for Chaos Battle League driving player engagement",
@@ -37,6 +40,7 @@ export default function Experience() {
         {
             role: "Senior Software Engineer",
             company: "Cloudcade Inc.",
+            image: "/experience/cloudcade.jpeg",
             period: "2018–2019",
             highlights: [
                 "Developed Heroes of Blood RPG in Cocos2d-x/C++ with PvE/PvP modes for 50K+ players",
@@ -46,6 +50,7 @@ export default function Experience() {
         {
             role: "Senior Software Engineer",
             company: "Caramel Tech Studios",
+            image: "/experience/carameltech.jpeg",
             period: "2017–2018",
             highlights: [
                 "Built Blades of Battle RPG boosting engagement by 30%, featured under Best New Games",
@@ -55,6 +60,7 @@ export default function Experience() {
         {
             role: "Software Developer",
             company: "Pixomondo, Germany",
+            image: "/experience/pixomondo.jpg",
             period: "2015",
             highlights: [
                 "Built VR applications using Unity3D & Oculus SDK for immersive 3D storytelling",
@@ -64,6 +70,7 @@ export default function Experience() {
         {
             role: "Software Engineer",
             company: "Caramel Tech Studios",
+            image: "/experience/carameltech.jpeg",
             period: "2012–2014",
             highlights: [
                 "Developed Astro Boy Flight & Order of Elements with multiplayer support for 10K+ players",
@@ -107,7 +114,16 @@ export default function Experience() {
                                         {exp.period}
                                     </span>
                                 </div>
-                                <h4 className="text-xl text-gray-700 mb-4 font-medium">{exp.company}</h4>
+                                <div className="flex items-center gap-3 mb-4">
+                                    {exp.image && (
+                                        <img
+                                            src={exp.image}
+                                            alt={exp.company}
+                                            className="w-10 h-10 object-contain rounded-md bg-white p-1 shadow-sm"
+                                        />
+                                    )}
+                                    <h4 className="text-xl text-gray-700 font-medium">{exp.company}</h4>
+                                </div>
                                 <ul className="list-disc ml-5 space-y-2 text-gray-600">
                                     {exp.highlights.map((point, i) => (
                                         <li key={i} className="leading-relaxed">{point}</li>
