@@ -4,11 +4,6 @@ import { FaGamepad, FaServer, FaTachometerAlt, FaCloud, FaTools, FaProjectDiagra
 export default function Skills() {
     const coreSkills = [
         {
-            category: 'Mobile Game Development',
-            icon: <FaProjectDiagram className="text-4xl mb-4 text-sky-500" />,
-            skills: 'Unity3D (C#), Cocos2d-x (C++), iOS & Android, Gameplay Architecture, Asset Optimisation'
-        },
-        {
             category: 'Backend Engineering',
             icon: <FaServer className="text-4xl mb-4 text-indigo-500" />,
             skills: 'Akka.NET, .NET Core, Microservices, Event-Driven Systems, DDD, TDD, Redis Caching'
@@ -22,6 +17,11 @@ export default function Skills() {
             category: 'DevOps & Cloud',
             icon: <FaCloud className="text-4xl mb-4 text-indigo-500" />,
             skills: 'AWS (EC2, S3, RDS, Lambda), Terraform, Docker, CI/CD (Jenkins, Git hooks)'
+        },
+        {
+            category: 'Mobile Game Development',
+            icon: <FaProjectDiagram className="text-4xl mb-4 text-sky-500" />,
+            skills: 'Unity3D (C#), Cocos2d-x (C++), iOS & Android, Gameplay Architecture, Asset Optimisation'
         },
         {
             category: 'Monitoring & Reliability',
